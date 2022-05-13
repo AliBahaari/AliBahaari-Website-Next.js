@@ -1,0 +1,41 @@
+.contentSection {
+    background-color: #E7ECEF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuSection {
+    border-right: 2px solid #DDD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.menuSection > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menuSection > div > a {
+    position: relative;
+}
+
+.menuSection > div > a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color:#000;
+    top: 100%;
+    left: 0;
+    transition: ease-in-out 100ms;
+}
+
+.menuSection > div > a:hover::after {
+    width: 100%;
+}
